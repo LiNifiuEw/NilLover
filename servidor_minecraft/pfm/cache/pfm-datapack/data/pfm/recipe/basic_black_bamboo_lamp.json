@@ -1,0 +1,28 @@
+{
+  "type": "pfm:furniture",
+  "ingredients": [
+    {
+      "item": "minecraft:black_wool"
+    },
+    {
+      "item": "minecraft:black_wool"
+    },
+    {
+      "item": "minecraft:black_wool"
+    },
+    {
+      "item": "minecraft:stripped_bamboo_block"
+    },
+    {
+      "item": "minecraft:stripped_bamboo_block"
+    }
+  ],
+  "result": {
+    "components": {
+      "pfm:color": "black",
+      "pfm:variant": "minecraft:bamboo"
+    },
+    "count": 1,
+    "id": "pfm:basic_lamp"
+  }
+}

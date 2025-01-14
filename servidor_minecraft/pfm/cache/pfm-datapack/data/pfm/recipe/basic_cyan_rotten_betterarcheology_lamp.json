@@ -1,0 +1,28 @@
+{
+  "type": "pfm:furniture",
+  "ingredients": [
+    {
+      "item": "minecraft:cyan_wool"
+    },
+    {
+      "item": "minecraft:cyan_wool"
+    },
+    {
+      "item": "minecraft:cyan_wool"
+    },
+    {
+      "item": "betterarcheology:rotten_planks"
+    },
+    {
+      "item": "betterarcheology:rotten_planks"
+    }
+  ],
+  "result": {
+    "components": {
+      "pfm:color": "cyan",
+      "pfm:variant": "betterarcheology:rotten"
+    },
+    "count": 1,
+    "id": "pfm:basic_lamp"
+  }
+}

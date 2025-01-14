@@ -1,0 +1,28 @@
+{
+  "type": "pfm:furniture",
+  "ingredients": [
+    {
+      "item": "minecraft:magenta_wool"
+    },
+    {
+      "item": "minecraft:magenta_wool"
+    },
+    {
+      "item": "minecraft:magenta_wool"
+    },
+    {
+      "item": "minecraft:stripped_bamboo_block"
+    },
+    {
+      "item": "minecraft:stripped_bamboo_block"
+    }
+  ],
+  "result": {
+    "components": {
+      "pfm:color": "magenta",
+      "pfm:variant": "minecraft:bamboo"
+    },
+    "count": 1,
+    "id": "pfm:basic_lamp"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "type": "pfm:furniture",
+  "ingredients": [
+    {
+      "item": "minecraft:red_wool"
+    },
+    {
+      "item": "minecraft:red_wool"
+    },
+    {
+      "item": "minecraft:red_wool"
+    },
+    {
+      "item": "minecraft:stripped_birch_log"
+    },
+    {
+      "item": "minecraft:stripped_birch_log"
+    }
+  ],
+  "result": {
+    "components": {
+      "pfm:color": "red",
+      "pfm:variant": "minecraft:birch"
+    },
+    "count": 1,
+    "id": "pfm:basic_lamp"
+  }
+}

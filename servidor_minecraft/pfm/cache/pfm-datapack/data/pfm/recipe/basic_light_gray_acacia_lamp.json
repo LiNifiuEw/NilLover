@@ -1,0 +1,28 @@
+{
+  "type": "pfm:furniture",
+  "ingredients": [
+    {
+      "item": "minecraft:light_gray_wool"
+    },
+    {
+      "item": "minecraft:light_gray_wool"
+    },
+    {
+      "item": "minecraft:light_gray_wool"
+    },
+    {
+      "item": "minecraft:stripped_acacia_log"
+    },
+    {
+      "item": "minecraft:stripped_acacia_log"
+    }
+  ],
+  "result": {
+    "components": {
+      "pfm:color": "light_gray",
+      "pfm:variant": "minecraft:acacia"
+    },
+    "count": 1,
+    "id": "pfm:basic_lamp"
+  }
+}

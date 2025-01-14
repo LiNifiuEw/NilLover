@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "pfm:tuff_coffee_table_modern"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "tuff_coffee_table_modern": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:polished_tuff"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "tuff_coffee_table_modern"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "pfm:tuff_coffee_table_modern"
+    ]
+  }
+}

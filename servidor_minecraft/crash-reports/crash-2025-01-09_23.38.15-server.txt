@@ -1,0 +1,323 @@
+---- Minecraft Crash Report ----
+// Everything's going to plan. No, really, that was supposed to happen.
+
+Time: 2025-01-09 23:38:15
+Description: Exception in server tick loop
+
+java.lang.NoClassDefFoundError: net/minecraft/class_437
+	at knot//io.wispforest.accessories.Accessories.askPlayerForVariant(Accessories.java:69)
+	at knot//io.wispforest.accessories.commands.AccessoriesCommands.lambda$registerCommands$2(AccessoriesCommands.java:70)
+	at knot//com.mojang.brigadier.context.ContextChain.runExecutable(ContextChain.java:73)
+	at knot//net.minecraft.class_8865.method_54416(class_8865.java:29)
+	at knot//net.minecraft.class_8865.execute(class_8865.java:13)
+	at knot//net.minecraft.class_8856.method_54405(class_8856.java:8)
+	at knot//net.minecraft.class_8847.method_54388(class_8847.java:8)
+	at knot//net.minecraft.class_8854.method_54390(class_8854.java:107)
+	at knot//net.minecraft.class_2170.method_54313(class_2170.java:379)
+	at knot//net.minecraft.class_2170.method_9249(class_2170.java:309)
+	at knot//net.minecraft.class_3244.method_58590(class_3244.java:1319)
+	at knot//net.minecraft.class_3244.method_44356(class_3244.java:1307)
+	at knot//net.minecraft.class_3738.run(class_3738.java:18)
+	at knot//net.minecraft.class_1255.method_18859(class_1255.java:162)
+	at knot//net.minecraft.class_4093.method_18859(class_4093.java:23)
+	at knot//net.minecraft.server.MinecraftServer.method_24306(MinecraftServer.java:864)
+	at knot//net.minecraft.server.MinecraftServer.method_18859(MinecraftServer.java:173)
+	at knot//net.minecraft.class_1255.method_16075(class_1255.java:136)
+	at knot//net.minecraft.server.MinecraftServer.method_20415(MinecraftServer.java:846)
+	at knot//net.minecraft.server.MinecraftServer.method_16075(MinecraftServer.java:840)
+	at knot//net.minecraft.class_1255.method_18857(class_1255.java:145)
+	at knot//net.minecraft.server.MinecraftServer.method_18857(MinecraftServer.java:810)
+	at knot//net.minecraft.server.MinecraftServer.method_16208(MinecraftServer.java:815)
+	at knot//net.minecraft.server.MinecraftServer.method_29741(MinecraftServer.java:702)
+	at knot//net.minecraft.server.MinecraftServer.method_29739(MinecraftServer.java:281)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.ClassNotFoundException: net.minecraft.class_437
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.loadClass(KnotClassDelegate.java:226)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassLoader.loadClass(KnotClassLoader.java:119)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	... 26 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.1
+	Minecraft Version ID: 1.21.1
+	Operating System: Linux (amd64) version 6.5.0-1025-azure
+	Java Version: 21.0.5, Ubuntu
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Ubuntu
+	Memory: 353875600 bytes (337 MiB) / 2264924160 bytes (2160 MiB) up to 8589934592 bytes (8192 MiB)
+	CPUs: 2
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD EPYC 7763 64-Core Processor
+	Identifier: AuthenticAMD Family 25 Model 1 Stepping 1
+	Microarchitecture: Zen 3
+	Frequency (GHz): -0.00
+	Number of physical packages: 1
+	Number of physical CPUs: 1
+	Number of logical CPUs: 2
+	Graphics card #0 name: unknown
+	Graphics card #0 vendor: unknown
+	Graphics card #0 VRAM (MiB): 0.00
+	Graphics card #0 deviceId: unknown
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MiB): 3964.78
+	Virtual memory used (MiB): 3956.92
+	Swap memory total (MiB): 0.00
+	Swap memory used (MiB): 0.00
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 23211.02, total: 45046.83
+	Space in storage for workdir (MiB): available: 18587.54, total: 32077.81
+	JVM Flags: 2 total; -Xms2G -Xmx8G
+	Fabric Mods: 
+		accessories: Accessories 1.1.0-beta.21+1.21.1
+		advancednetherite: Advanced Netherite 2.2.1-1.21.1
+		amendments: Amendments 1.21-1.2.22
+		animal_armor_trims: Animal Armor Trims 2.0.0
+		another_furniture: Another Furniture 4.0.0
+		appleskin: AppleSkin 3.0.6+mc1.21
+		architectury: Architectury 13.0.8
+		artifacts: Artifacts 12.0.6
+			cardinal-components-base: Cardinal Components API (base) 6.1.0
+			cardinal-components-entity: Cardinal Components API (entities) 6.1.0
+			expandability: ExpandAbility 12.0.0
+		backpacked: Backpacked 3.0.0-beta.10
+		betterarcheology: Better Archeology 1.2.0-1.21
+		betterchunkloading: Better chunk loading mod 1.21-5.2
+		betterdeserttemples: YUNG's Better Desert Temples 1.21.1-Fabric-4.1.2
+		betterdungeons: YUNG's Better Dungeons 1.21.1-Fabric-5.1.4
+		betterendisland: YUNG's Better End Island 1.21.1-Fabric-3.1.1
+		betterfortresses: YUNG's Better Nether Fortresses 1.21.1-Fabric-3.1.3
+		betterjungletemples: YUNG's Better Jungle Temples 1.21.1-Fabric-3.1.2
+		bettermineshafts: YUNG's Better Mineshafts 1.21.1-Fabric-5.1.1
+		betteroceanmonuments: YUNG's Better Ocean Monuments 1.21.1-Fabric-4.1.2
+		betterstrongholds: YUNG's Better Strongholds 1.21.1-Fabric-5.1.2
+		betterwitchhuts: YUNG's Better Witch Huts 1.21.1-Fabric-4.1.1
+		blastingraw: BlastingRaw 1.21.1-2-fabric
+		blastingsand: Smelting Sand In a Blast Furnace 1.21.1-11-fabric
+		bookshelf: Bookshelf 21.1.31
+		carryon: Carry On 2.2.2
+		chunksending: Chunksending Mod 1.21-2.8
+		clayblasting: Blasting Clay and Clay Balls 1.21.1-0-fabric
+		cloth-config: Cloth Config v15 15.0.140
+			cloth-basic-math: cloth-basic-math 0.6.1
+		clumps: Clumps 19.0.0.1
+		combat-plus-core: Combat+ Core 3.1.0+1.21
+			lilylib: LilyLib 1.3.0+1.21
+		connectivity: Connectivity Mod 1.21-6.5
+		cratedelight: Crate Delight 24.11.22-1.21-fabric
+		cristellib: Cristel Lib 1.2.8
+		cupboard: cupboard 1.21-2.7
+		darkpaintings: DarkPaintings 21.1.2
+		debugify: Debugify 1.21.1+1.0
+		disenchanting_table: Dis-Enchanting Table 3.1.0
+		dummmmmmy: MmmMmmMmmMmm 1.21-2.0.6
+		dumplings_delight: Dumpling's Delight Rewrapped 1.21.1-1.2.1+fabric
+		easyanvils: Easy Anvils 21.1.0
+		easymagic: Easy Magic 21.1.0
+		easyshulkerboxes: Easy Shulker Boxes 21.1.0
+			iteminteractions: Item Interactions 21.1.0
+		elytraslot: Elytra Slot 9.0.1+1.21.1
+		elytratrims: Elytra Trims 3.5.6
+			conditional-mixin: conditional mixin 0.6.3
+			mixinsquared: MixinSquared 0.1.2-beta.4
+		ends_delight: End's Delight refabricated-1.21.1-2.5
+		extended-enchanting: Extended Enchanting 2.0.0+1.21
+		fabric-api: Fabric API 0.114.0+1.21.1
+			fabric-api-base: Fabric API Base 0.4.42+6573ed8c19
+			fabric-api-lookup-api-v1: Fabric API Lookup API (v1) 1.6.70+b559734419
+			fabric-biome-api-v1: Fabric Biome API (v1) 13.0.31+d527f9fd19
+			fabric-block-api-v1: Fabric Block API (v1) 1.0.22+0af3f5a719
+			fabric-block-view-api-v2: Fabric BlockView API (v2) 1.0.10+6573ed8c19
+			fabric-command-api-v1: Fabric Command API (v1) 1.2.49+f71b366f19
+			fabric-command-api-v2: Fabric Command API (v2) 2.2.28+6ced4dd919
+			fabric-commands-v0: Fabric Commands (v0) 0.2.66+df3654b319
+			fabric-content-registries-v0: Fabric Content Registries (v0) 8.0.18+b559734419
+			fabric-convention-tags-v1: Fabric Convention Tags 2.1.2+7f945d5b19
+			fabric-convention-tags-v2: Fabric Convention Tags (v2) 2.9.2+e60e56d419
+			fabric-crash-report-info-v1: Fabric Crash Report Info (v1) 0.2.29+0af3f5a719
+			fabric-data-attachment-api-v1: Fabric Data Attachment API (v1) 1.4.0+da19b51a19
+			fabric-data-generation-api-v1: Fabric Data Generation API (v1) 20.2.25+16c4ae2519
+			fabric-dimensions-v1: Fabric Dimensions API (v1) 4.0.0+6fc22b9919
+			fabric-entity-events-v1: Fabric Entity Events (v1) 1.7.0+2122d82819
+			fabric-events-interaction-v0: Fabric Events Interaction (v0) 0.7.13+ba9dae0619
+			fabric-game-rule-api-v1: Fabric Game Rule API (v1) 1.0.53+6ced4dd919
+			fabric-item-api-v1: Fabric Item API (v1) 11.1.1+d5debaed19
+			fabric-item-group-api-v1: Fabric Item Group API (v1) 4.1.6+6823f7cd19
+			fabric-lifecycle-events-v1: Fabric Lifecycle Events (v1) 2.5.0+01d9a51c19
+			fabric-loot-api-v2: Fabric Loot API (v2) 3.0.15+3f89f5a519
+			fabric-loot-api-v3: Fabric Loot API (v3) 1.0.3+3f89f5a519
+			fabric-message-api-v1: Fabric Message API (v1) 6.0.13+6573ed8c19
+			fabric-networking-api-v1: Fabric Networking API (v1) 4.3.0+c7469b2119
+			fabric-object-builder-api-v1: Fabric Object Builder API (v1) 15.2.1+40875a9319
+			fabric-particles-v1: Fabric Particles (v1) 4.0.2+6573ed8c19
+			fabric-recipe-api-v1: Fabric Recipe API (v1) 5.0.14+248df81c19
+			fabric-registry-sync-v0: Fabric Registry Sync (v0) 5.2.0+34f5d91419
+			fabric-rendering-data-attachment-v1: Fabric Rendering Data Attachment (v1) 0.3.48+73761d2e19
+			fabric-rendering-fluids-v1: Fabric Rendering Fluids (v1) 3.1.6+1daea21519
+			fabric-resource-conditions-api-v1: Fabric Resource Conditions API (v1) 4.3.0+8dc279b119
+			fabric-resource-loader-v0: Fabric Resource Loader (v0) 1.3.1+5b5275af19
+			fabric-screen-handler-api-v1: Fabric Screen Handler API (v1) 1.3.88+b559734419
+			fabric-transfer-api-v1: Fabric Transfer API (v1) 5.4.2+c24bd99419
+			fabric-transitive-access-wideners-v1: Fabric Transitive Access Wideners (v1) 6.2.0+45b9699719
+		fabric-language-kotlin: Fabric Language Kotlin 1.13.0+kotlin.2.1.0
+			org_jetbrains_kotlin_kotlin-reflect: kotlin-reflect 2.1.0
+			org_jetbrains_kotlin_kotlin-stdlib: kotlin-stdlib 2.1.0
+			org_jetbrains_kotlin_kotlin-stdlib-jdk7: kotlin-stdlib-jdk7 2.1.0
+			org_jetbrains_kotlin_kotlin-stdlib-jdk8: kotlin-stdlib-jdk8 2.1.0
+			org_jetbrains_kotlinx_atomicfu-jvm: atomicfu-jvm 0.26.1
+			org_jetbrains_kotlinx_kotlinx-coroutines-core-jvm: kotlinx-coroutines-core-jvm 1.9.0
+			org_jetbrains_kotlinx_kotlinx-coroutines-jdk8: kotlinx-coroutines-jdk8 1.9.0
+			org_jetbrains_kotlinx_kotlinx-datetime-jvm: kotlinx-datetime-jvm 0.6.1
+			org_jetbrains_kotlinx_kotlinx-io-bytestring-jvm: kotlinx-io-bytestring-jvm 0.6.0
+			org_jetbrains_kotlinx_kotlinx-io-core-jvm: kotlinx-io-core-jvm 0.6.0
+			org_jetbrains_kotlinx_kotlinx-serialization-cbor-jvm: kotlinx-serialization-cbor-jvm 1.7.3
+			org_jetbrains_kotlinx_kotlinx-serialization-core-jvm: kotlinx-serialization-core-jvm 1.7.3
+			org_jetbrains_kotlinx_kotlinx-serialization-json-jvm: kotlinx-serialization-json-jvm 1.7.3
+		fabricloader: Fabric Loader 0.16.9
+		farmersdelight: Farmer's Delight 1.21.1-2.2.8+refabricated
+			mm: Manningham Mills 2.3
+			porting_lib_base: Porting Lib Base 3.1.0-beta.47.hotfix.2+1.21.1
+				mixinextras: MixinExtras 0.5.0-beta.3
+				porting_lib_accessors: Porting Lib Accessors 3.1.0-beta.47.hotfix.2+1.21.1
+				porting_lib_asm: Porting Lib ASM 3.1.0-beta.47.hotfix.2+1.21.1
+				porting_lib_attributes: Porting Lib Attributes 3.1.0-beta.47.hotfix.2+1.21.1
+				porting_lib_blocks: Porting Lib Blocks 3.1.0-beta.47.hotfix.2+1.21.1
+				porting_lib_common: Porting Lib Common 3.1.0-beta.47.hotfix.2+1.21.1
+				porting_lib_core: Porting Lib Core 3.1.0-beta.47.hotfix.2+1.21.1
+				porting_lib_entity: Porting Lib Entity 3.1.0-beta.47.hotfix.2+1.21.1
+				porting_lib_extensions: Porting Lib Extensions 3.1.0-beta.47.hotfix.2+1.21.1
+				porting_lib_fluids: Porting Lib Fluids 3.1.0-beta.47.hotfix.2+1.21.1
+				porting_lib_gametest: Porting Lib GameTest 3.1.0-beta.47.hotfix.2+1.21.1
+				porting_lib_gui_utils: Porting Lib Gui Utils 3.1.0-beta.47.hotfix.2+1.21.1
+				porting_lib_level_events: Porting Lib Level Events 3.1.0-beta.47.hotfix.2+1.21.1
+				porting_lib_mixin_extensions: Porting Lib Mixin Extensions 3.1.0-beta.47.hotfix.2+1.21.1
+				porting_lib_tags: Porting Lib Tags 3.0
+				porting_lib_transfer: Porting Lib Transfer 3.1.0-beta.47.hotfix.2+1.21.1
+			porting_lib_config: Porting Lib Config 3.1.0-beta.47.hotfix.2+1.21.1
+			porting_lib_item_abilities: Porting Lib Item Abilities 3.1.0-beta.47.hotfix.2+1.21.1
+			porting_lib_lazy_registration: Porting Lib Lazy Register 3.1.0-beta.47.hotfix.2+1.21.1
+			porting_lib_loot: Porting Lib Loot 3.1.0-beta.47.hotfix.2+1.21.1
+				porting_lib_conditions: Porting Lib Conditions 3.1.0-beta.47.hotfix.2+1.21.1
+			porting_lib_recipe_book_categories: Porting Lib Recipe Book Categories 3.1.0-beta.47.hotfix.2+1.21.1
+		fastasyncworldsave: fastasyncworldsave Mod 1.21-2.2
+		ferritecore: FerriteCore 7.0.2-hotfix
+		forgeconfigapiport: Forge Config API Port 21.1.3
+			com_electronwill_night-config_core: core 3.8.0
+			com_electronwill_night-config_toml: toml 3.8.0
+		framework: Framework 0.9.4
+			org_javassist_javassist: javassist 3.29.2-GA
+		frightsdelight: Fright's Delight 1.2.2
+		handcrafted: Handcrafted 4.0.2
+		jade: Jade 15.9.2+fabric
+		jamlib: JamLib 1.2.2-build.2+1.21.1
+			blue_endless_jankson: jankson 1.2.3
+		java: OpenJDK 64-Bit Server VM 21
+		jei: Just Enough Items 19.8.4.113
+		journeymap: Journeymap 1.21.1-6.0.0-beta.32
+			ar_com_hjg_pngj: pngj 2.1.0
+			commonnetworking: Common Network 1.0.16-1.21.1
+			journeymap-api-fabric: JourneyMap API 2.0.0-1.21.1-SNAPSHOT
+		lavender: Lavender 0.1.14+1.21
+			lavender-md: lavender-md 0.1.2+1.21
+			lavender-md-owo-ui: lavender-md-owo-ui 0.1.2+1.21
+		lithium: Lithium 0.14.3-snapshot+mc1.21.1-build.92
+		lootintegration_townsandtowers: lootintegration_townsandtowers Mod 1
+		lootintegrations: Loot integration Mod 1.21-4.0
+		lootintegrations_betterarcheology: lootintegrations_betterarcheology Mod 1
+		lootintegrations_vanilla: lootintegrations_vanilla Mod 1
+		lootintegrations_yungs: lootintegrations_yungs Mod 1
+		mcwbridges: Macaw's Bridges 3.0.0
+		mcwdoors: Macaw's Doors 1.1.1
+		mcwfences: Macaw's Fences and Walls 1.1.2
+		mcwfurnitures: Macaw's Furniture 3.3.0
+		mcwlights: Macaw's Lights and Lamps 1.1.1
+		mcwpaintings: Macaw's Paintings 1.0.5
+		mcwpaths: Macaw's Paths and Pavings 1.0.5
+		mcwstairs: Macaw's Stairs and Balconies 1.0.0
+		mcwtrpdoors: Macaw's Trapdoors 1.1.4
+		mcwwindows: Macaw's Windows 2.3.2
+		merenc: Merge Enchantments 4.1
+		midnightlib: MidnightLib 1.6.3
+		minecraft: Minecraft 1.21.1
+		modernfix: ModernFix 5.20.0+mc1.21.1
+		monolib: MonoLib 1.4.1
+		moonlight: Moonlight Lib 1.21-2.17.12
+		more_armor_trims: More Armor Trims 1.4.1-1.21
+		moredelight: More Delight 25.1.6-1.21-fabric
+		mynethersdelight: My Nether's Delight 1.21.1-1.1.2+1.7.7.refabricated
+		nerb: Not Enough Recipe Book 0.4.1
+		netherite_horse_armor: Netherite Horse Armor 1.21-1.0.4a
+		netherrackblasting: Blasting Netherrack into Nether Bricks 1.21.1-0-fabric
+		nets: Not Enough Trinket Slots (NETS) 0.3.6
+		noisium: Noisium 2.3.0+mc1.21-1.21.1
+		oceansdelight: Ocean's Delight fdrf-fabric-1.0.2-1.21
+		octolib: OctoLib 0.5.0.1
+			org_yaml_snakeyaml: snakeyaml 2.2
+		onlyhammers: OnlyHammers 1.21.1-0.2
+		owo: oωo 0.12.15+1.21
+			io_wispforest_endec: endec 0.1.5
+			io_wispforest_endec_gson: gson 0.1.3
+			io_wispforest_endec_jankson: jankson 0.1.3
+			io_wispforest_endec_netty: netty 0.1.2
+		pfm: Paladin's Furniture 1.3
+		pineapple_delight: Pineapple Delight 1.0.3-1.21.1-Fabric
+		placeholder-api: Placeholder API 2.4.1+1.21
+		prickle: PrickleMC 21.1.6
+		puzzleslib: Puzzles Lib 21.1.24
+		recipeessentials: recipeessentials Mod 1.21-3.9
+		refurbished_furniture: MrCrayfish's Furniture Mod: Refurbished 1.0.8
+		repurposed_structures: Repurposed Structures 7.5.12+1.21.1-fabric
+		resourcefullib: Resourceful Lib 3.0.11
+			com_teamresourceful_bytecodecs: bytecodecs 1.1.2
+			com_teamresourceful_yabn: yabn 1.0.3
+		ring_of_flight: ring_of_flight 0.0.8-1.21.1-fabric
+		rusticdelight: Rustic Delight 1.0.2
+		seeddelight: Seed Delight 0.1
+		smeltingstone: Smelting Cobblestone In a Blast Furnace 1.21.1-0-fabric
+		smoothchunk: Smooth chunk save Mod 1.21-3.8
+		spark: spark 1.10.109
+			fabric-permissions-api-v0: fabric-permissions-api 0.3.1
+		spicydelight: Spicy Delight 1.0.0
+		storagedelight: Storage Delight 24.12.15-1.21-fabric
+		storagedrawers: Storage Drawers 13.8.5
+		structureessentials: Structure Essentials Mod 1.21-3.4
+		supermartijn642configlib: SuperMartijn642's Config Lib 1.1.8
+		supplementaries: Supplementaries 1.21-3.0.30-beta
+		suppsquared: Supplementaries Squared 1.21-1.2.3
+		t_and_t: Towns and Towers 1.13.2
+		tclayer: Accessories Trinkets Compat Layer 3.10.0+beta.19
+		things: Things 0.4.2+1.21
+		trimmable_tools: Trimmable Tools 2.0.5
+		trop: The Rings of Power 24.8.29
+		ubesdelight: Ube's Delight 0.3.1
+		utility_belt: Utility Belt 2.6.0+1.21.1
+		vegandelight: Vegan Delight 1.4.0
+		yet_another_config_lib_v3: YetAnotherConfigLib 3.6.2+1.21-fabric
+			com_twelvemonkeys_common_common-image: common-image 3.12.0
+			com_twelvemonkeys_common_common-io: common-io 3.12.0
+			com_twelvemonkeys_common_common-lang: common-lang 3.12.0
+			com_twelvemonkeys_imageio_imageio-core: imageio-core 3.12.0
+			com_twelvemonkeys_imageio_imageio-metadata: imageio-metadata 3.12.0
+			com_twelvemonkeys_imageio_imageio-webp: imageio-webp 3.12.0
+			org_quiltmc_parsers_gson: gson 0.2.1
+			org_quiltmc_parsers_json: json 0.2.1
+		yungsapi: YUNG's API 1.21.1-Fabric-5.1.3
+		yungsbridges: YUNG's Bridges 1.21.1-Fabric-5.1.1
+		yungsextras: YUNG's Extras 1.21.1-Fabric-5.1.1
+			org_reflections_reflections: reflections 0.10.2
+	Server Running: true
+	Player Count: 1 / 2; [class_3222['Coffeent'/269, l='ServerLevel[world]', x=28.74, y=67.00, z=4.07]]
+	Active Data Packs: vanilla, fabric, accessories, advancednetherite, amendments, animal_armor_trims (incompatible), another_furniture, artifacts, backpacked (incompatible), betterarcheology, betterdeserttemples (incompatible), betterdungeons (incompatible), betterendisland (incompatible), betterfortresses (incompatible), betterjungletemples (incompatible), bettermineshafts (incompatible), betteroceanmonuments (incompatible), betterstrongholds (incompatible), betterwitchhuts (incompatible), blastingraw, blastingsand, bookshelf (incompatible), carryon (incompatible), clayblasting, combat-plus-core, cratedelight, darkpaintings (incompatible), disenchanting_table (incompatible), dummmmmmy, dumplings_delight, easyanvils (incompatible), easymagic (incompatible), easyshulkerboxes (incompatible), elytraslot (incompatible), elytratrims (incompatible), ends_delight, extended-enchanting, fabric-convention-tags-v2, farmersdelight, frightsdelight, handcrafted, lootintegration_townsandtowers (incompatible), lootintegrations (incompatible), lootintegrations_betterarcheology (incompatible), lootintegrations_vanilla (incompatible), lootintegrations_yungs (incompatible), mcwbridges (incompatible), mcwdoors (incompatible), mcwfences (incompatible), mcwfurnitures (incompatible), mcwlights (incompatible), mcwpaintings (incompatible), mcwpaths (incompatible), mcwstairs (incompatible), mcwtrpdoors (incompatible), mcwwindows (incompatible), moonlight, more_armor_trims, moredelight, mynethersdelight (incompatible), netherite_horse_armor, netherrackblasting, nets, oceansdelight, onlyhammers, pfm, pineapple_delight, porting_lib_base, porting_lib_gametest, porting_lib_item_abilities, porting_lib_tags, refurbished_furniture (incompatible), repurposed_structures, ring_of_flight, rusticdelight, seeddelight, smeltingstone, spicydelight, storagedelight, storagedrawers, supplementaries, suppsquared, t_and_t, tclayer, things, trimmable_tools (incompatible), ubesdelight, utility_belt, vegandelight, yungsapi (incompatible), yungsbridges (incompatible), yungsextras (incompatible), pfm-data-resources, supplementaries:generated_pack, suppsquared:generated_pack
+	Available Data Packs: accessories, advancednetherite, amendments, animal_armor_trims (incompatible), another_furniture, artifacts, backpacked (incompatible), betterarcheology, betterdeserttemples (incompatible), betterdungeons (incompatible), betterendisland (incompatible), betterfortresses (incompatible), betterjungletemples (incompatible), bettermineshafts (incompatible), betteroceanmonuments (incompatible), betterstrongholds (incompatible), betterwitchhuts (incompatible), blastingraw, blastingsand, bookshelf (incompatible), bundle, carryon (incompatible), clayblasting, combat-plus-core, cratedelight, darkpaintings (incompatible), disenchanting_table (incompatible), dummmmmmy, dumplings_delight, easyanvils (incompatible), easymagic (incompatible), easyshulkerboxes (incompatible), elytraslot (incompatible), elytratrims (incompatible), ends_delight, extended-enchanting, fabric, fabric-convention-tags-v2, farmersdelight, frightsdelight, handcrafted, lootintegration_townsandtowers (incompatible), lootintegrations (incompatible), lootintegrations_betterarcheology (incompatible), lootintegrations_vanilla (incompatible), lootintegrations_yungs (incompatible), mcwbridges (incompatible), mcwdoors (incompatible), mcwfences (incompatible), mcwfurnitures (incompatible), mcwlights (incompatible), mcwpaintings (incompatible), mcwpaths (incompatible), mcwstairs (incompatible), mcwtrpdoors (incompatible), mcwwindows (incompatible), moonlight, more_armor_trims, moredelight, mynethersdelight (incompatible), netherite_horse_armor, netherrackblasting, nets, oceansdelight, onlyhammers, pfm, pfm-data-resources, pineapple_delight, porting_lib_base, porting_lib_gametest, porting_lib_item_abilities, porting_lib_tags, refurbished_furniture (incompatible), repurposed_structures, ring_of_flight, rusticdelight, seeddelight, smeltingstone, spicydelight, storagedelight, storagedrawers, supplementaries, supplementaries:generated_pack, suppsquared, suppsquared:generated_pack, t_and_t, tclayer, things, trade_rebalance, trimmable_tools (incompatible), ubesdelight, utility_belt, vanilla, vegandelight, yungsapi (incompatible), yungsbridges (incompatible), yungsextras (incompatible)
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Stable
+	World Seed: -2717057777465501687
+	Is Modded: Definitely; Server brand changed to 'fabric'
+	Type: Dedicated Server (map_server.txt)
